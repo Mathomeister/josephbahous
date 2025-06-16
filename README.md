@@ -4,24 +4,35 @@ A comprehensive starter repository for web development teams using Cursor AI, wi
 
 ---
 
-## 🚀 Zero-Friction Setup (Prompt-Driven)
+## 🚀 Zero-Friction Setup (Step-by-Step, Safe for Existing Users)
 
-**Just copy and paste the following prompt into your Cursor chat to set up this project:**
+**Copy and paste the following prompt into your Cursor chat to set up this project:**
 
 ```
-Set up this project for me:
-- Initialize the project structure if needed
-- Configure `.cursor/mcp.json` with all recommended MCP servers, including Shrimp Task Manager (set DATA_DIR to an absolute path inside this project)
-- Ensure all agent rules are in place
-- Tell me if I need to install anything (Node.js, npm, etc.)
-- Guide me to restart Cursor and enable the MCP servers
-- Show me how to start using Shrimp for task management and which agent to talk to for project planning
+I want to set up this project for use with Cursor AI. Please guide me step by step, and do NOT overwrite or disrupt any of my existing MCP server configurations unless I explicitly confirm. For each step:
+- Explain what you are about to do and why
+- Ask for my confirmation before making any changes (especially to .cursor/mcp.json or global MCP settings)
+- If I have existing MCP servers, show me what will be added or changed, and let me choose to merge, skip, or customize
+- After each step, wait for my input before proceeding
+- Only initialize the project structure if it is missing
+- When configuring Shrimp Task Manager or any other MCP, ensure DATA_DIR is unique to this project and does not conflict with other projects
+- At the end, summarize what was set up and provide next steps for using the agents and task manager
+- **Also, check if this project is still connected to the original template repository. If so, guide me through:**
+  - Removing the original remote (so I don't push to the template by mistake)
+  - Adding my own new remote (ask for the URL)
+  - Pushing the project to my new repository
+  - Explain each step and ask for confirmation before making changes
+- **Before making any git changes, check if you have the necessary permissions in Cursor to manage git remotes and push to repositories. If not, guide me to enable these permissions in Cursor settings.**
+
+Let's begin the setup process now.
 ```
 
-**That's it!** The agent will walk you through the rest, including:
-- Setting up MCP servers for web search, browser tools, git, filesystem, and Shrimp Task Manager
-- Ensuring DATA_DIR for Shrimp is unique to this project (e.g., `/absolute/path/to/your-project/shrimp-data`)
-- Providing next steps for using agents and managing tasks
+---
+
+## Why Step-by-Step?
+- **Protects your existing Cursor/MCP setup**
+- **Lets you review and approve each change**
+- **Ensures a smooth onboarding for both new and experienced users**
 
 ---
 
