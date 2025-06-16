@@ -1,64 +1,134 @@
 # Web Development Cursor Bootstrap Repository
 
-A comprehensive bootstrap repository for web development teams using Cursor AI with optimized agent configurations, rules, and cost-effective model selection strategies.
+A comprehensive starter repository for web development teams using Cursor AI, with optimized agent configurations, rules, and cost-effective model selection strategies.
 
-## 🚀 Quick Start
+---
 
-1. **Use this repository as a template** for your new project
-2. **Clone and rename** to your project name
-3. **Run the setup script** to initialize everything
-4. **Start developing** with AI-powered agents optimized for your role
+## 🚀 Zero-Friction Setup (Prompt-Driven)
 
-```bash
-# Method 1: Use GitHub template (Recommended)
-# 1. Click "Use this template" button on GitHub
-# 2. Create your new repository
-# 3. Clone your new repo
-git clone <your-new-repo-url>
-cd your-project-name
-./scripts/setup.sh
+**Just copy and paste the following prompt into your Cursor chat to set up this project:**
 
-# Method 2: Clone and rename manually
-git clone <this-repo-url> my-awesome-project
-cd my-awesome-project
-
-# Remove original git history and start fresh
-rm -rf .git
-git init
-git add .
-git commit -m "Initial commit from web-dev-cursor-bootstrap"
-
-# Run setup script to configure the project
-./scripts/setup.sh
-
-# Start development
-npm run dev
+```
+Set up this project for me:
+- Initialize the project structure if needed
+- Configure `.cursor/mcp.json` with all recommended MCP servers, including Shrimp Task Manager (set DATA_DIR to an absolute path inside this project)
+- Ensure all agent rules are in place
+- Tell me if I need to install anything (Node.js, npm, etc.)
+- Guide me to restart Cursor and enable the MCP servers
+- Show me how to start using Shrimp for task management and which agent to talk to for project planning
 ```
 
-## 📋 Table of Contents
+**That's it!** The agent will walk you through the rest, including:
+- Setting up MCP servers for web search, browser tools, git, filesystem, and Shrimp Task Manager
+- Ensuring DATA_DIR for Shrimp is unique to this project (e.g., `/absolute/path/to/your-project/shrimp-data`)
+- Providing next steps for using agents and managing tasks
 
+---
+
+## 📋 Table of Contents
 - [Agent Overview](#-agent-overview)
-- [Cost Optimization Strategy](#-cost-optimization-strategy)
 - [Repository Structure](#-repository-structure)
-- [Agent Configuration](#-agent-configuration)
-- [Getting Started](#-getting-started)
 - [MCP Integration](#-mcp-integration)
-- [Usage Examples](#-usage-examples)
+- [Using Shrimp Task Manager](#-using-shrimp-task-manager)
+- [Troubleshooting](#-troubleshooting)
 - [Best Practices](#-best-practices)
-- [Contributing](#-contributing)
+
+---
 
 ## 🤖 Agent Overview
 
 This repository includes optimized AI agent configurations for a complete web development team:
 
-| Agent Role | Primary Model | Secondary Model | Use Case |
-|------------|---------------|-----------------|----------|
-| 🎨 **UI/UX Designer** | Gemini 2.5 Flash (FREE) | Claude 3.5 Sonnet | Design systems, responsive layouts, accessibility |
-| ⚛️ **Frontend Developer** | Gemini 2.5 Flash (FREE) | Claude 3.5 Sonnet | React components, TypeScript, state management |
-| 🔧 **Backend Developer** | DeepSeek V3.1 (FREE) | Claude 3.5 Sonnet | APIs, databases, authentication, server logic |
-| 🧪 **QA/Testing** | GPT-4o mini (FREE) | Claude 3.5 Sonnet | Test automation, coverage analysis, quality assurance |
-| 🚀 **DevOps** | Grok 3 Mini (FREE) | Gemini 2.5 Pro | CI/CD, deployment, monitoring, infrastructure |
-| 📋 **Project Manager** | Cursor Small (FREE) | GPT-4o | Requirements, planning, coordination, documentation |
+| Agent Role           | Use Case                                      |
+|----------------------|-----------------------------------------------|
+| 🎨 UI/UX Designer    | Design systems, responsive layouts, a11y      |
+| ⚛️ Frontend Dev      | React components, TypeScript, state mgmt      |
+| 🔧 Backend Dev       | APIs, databases, authentication, server logic |
+| 🧪 QA/Testing        | Test automation, coverage, QA                 |
+| 🚀 DevOps            | CI/CD, deployment, monitoring, infrastructure |
+| 📋 Project Manager   | Requirements, planning, coordination, docs    |
+
+---
+
+## 📁 Repository Structure
+
+```
+web-dev-cursor-bootstrap/
+├── .cursor/
+│   ├── rules/           # Agent rules (core, global, ts, ui, testing, tool)
+│   └── mcp-configs/     # Example MCP server configs
+├── docs/                # Documentation and guides
+├── scripts/             # (Legacy) Setup scripts (no longer primary)
+├── templates/           # Project templates and boilerplates
+└── README.md            # This file
+```
+
+---
+
+## 🔌 MCP Integration
+
+**Recommended MCP servers (auto-configured by the setup prompt):**
+- Web Search
+- Browser Tools
+- Filesystem
+- Git
+- SQLite
+- Shrimp Task Manager (for project task management)
+
+**Shrimp Task Manager config example:**
+```json
+{
+  "mcpServers": {
+    "shrimp-task-manager": {
+      "command": "npx",
+      "args": ["-y", "mcp-shrimp-task-manager"],
+      "env": {
+        "DATA_DIR": "/absolute/path/to/your-project/shrimp-data",
+        "TEMPLATES_USE": "en",
+        "ENABLE_GUI": "false"
+      }
+    }
+  }
+}
+```
+- The agent will set `DATA_DIR` to a unique, absolute path for your project.
+
+---
+
+## 🦐 Using Shrimp Task Manager
+
+- **Plan tasks:** `plan task [your description]`
+- **List tasks:** `list tasks`
+- **Execute a task:** `execute task [task name or ID]`
+- **Research mode:** `research [your topic]`
+- **Continuous mode:** `continuous mode`
+- **Initialize project rules:** `init project rules`
+
+**Start with the Project Manager agent** to define your PRD and project plan, then use Shrimp for structured task management.
+
+---
+
+## 🛠️ Troubleshooting
+
+- **Node.js not installed:** The agent will prompt you to install it if missing.
+- **MCP server not running:** Restart Cursor and check MCP settings.
+- **Shrimp DATA_DIR issues:** Ensure the path is absolute and unique per project.
+- **Agent not responding:** Try reloading Cursor or starting a new chat.
+
+---
+
+## 🎯 Best Practices
+- Use the setup prompt for every new project.
+- Keep `.cursor/mcp.json` project-specific.
+- Use Shrimp for all task planning and tracking.
+- Start with the Project Manager agent for requirements and planning.
+- Regularly check MCP server status in Cursor settings.
+
+---
+
+## 🧹 Cleanup
+- Legacy setup scripts are still available in `scripts/` for advanced/manual use, but are no longer required for standard onboarding.
+- All onboarding is now prompt-driven for maximum simplicity.
 
 ## 💰 Cost Optimization Strategy
 
@@ -75,158 +145,6 @@ This repository includes optimized AI agent configurations for a complete web de
    - Performance optimization required
    - Final code review and polish
    - Critical bug resolution
-
-## 📁 Repository Structure
-
-```
-web-dev-cursor-bootstrap/
-├── .cursor/
-│   ├── rules/
-│   │   ├── core-rules/           # Rule generation and core behavior
-│   │   ├── global-rules/         # Always-applied team standards
-│   │   ├── ts-rules/            # TypeScript and JavaScript specific
-│   │   ├── ui-rules/            # React, CSS, design system rules
-│   │   ├── testing-rules/       # Testing strategies and QA
-│   │   └── tool-rules/          # DevOps, CI/CD, tooling
-│   └── mcp-configs/             # MCP server configurations
-├── docs/                        # Documentation and guides
-│   └── MCP_GUIDE.md            # Comprehensive MCP setup guide
-├── scripts/                     # Setup and utility scripts
-│   ├── setup.sh               # Main project setup script
-│   └── setup-mcp.sh           # MCP configuration script
-├── templates/                   # Project templates and boilerplates
-│   ├── .cursor/mcp.json       # Basic MCP configuration
-│   ├── .github/workflows/     # CI/CD templates
-│   ├── package.json           # Dependencies template
-│   ├── Dockerfile             # Container template
-│   └── nginx.conf             # Web server configuration
-└── README.md                    # This file
-```
-
-## ⚙️ Agent Configuration
-
-### Rule Types Explained
-
-- **Always Rules** (`-always.mdc`): Applied to every conversation
-- **Agent Rules** (`-agent.mdc`): Applied when specific expertise is needed
-- **Auto Rules** (`-auto.mdc`): Applied automatically based on file patterns
-- **Manual Rules** (`-manual.mdc`): Applied manually when needed
-
-### Key Features
-
-- **Role-based expertise**: Each agent has specialized knowledge and best practices
-- **Cost-aware model selection**: Optimized for Cursor Business pricing
-- **Modern tech stack**: React 18+, TypeScript 5+, Tailwind CSS 3+, Vite
-- **Quality standards**: Testing, accessibility, performance, security built-in
-- **Team coordination**: Clear handoff processes between different roles
-- **MCP Integration**: Pre-configured Model Context Protocol servers for enhanced AI capabilities
-- **Browser Automation**: Built-in browser tools for testing and debugging
-- **Cloud Integration**: Ready-to-use configurations for AWS, Vercel, Netlify
-
-## 🏁 Getting Started
-
-### 1. Set Up Your Project
-
-```bash
-# Use this repository as a template
-git clone <this-repo-url> my-awesome-project
-cd my-awesome-project
-
-# Remove original git history and start fresh
-rm -rf .git
-git init
-
-# Run the setup script
-./scripts/setup.sh
-
-# The script will:
-# - Configure the project structure
-# - Set up package.json with your project name
-# - Create all necessary configuration files
-# - Set up MCP if desired
-```
-
-### 2. Configure Your Environment
-
-```bash
-# Initialize Tailwind CSS
-npx tailwindcss init -p
-
-# Set up testing
-npm install -D @testing-library/user-event jest-environment-jsdom
-
-# Configure ESLint and Prettier
-npm install -D eslint prettier eslint-config-prettier
-```
-
-### 3. Configure MCP Servers (Optional but Recommended)
-
-```bash
-# Run the MCP setup script
-./scripts/setup-mcp.sh
-
-# Or manually copy MCP configuration
-cp templates/.cursor/mcp.json .cursor/
-```
-
-### 4. Start Using Agents
-
-Open Cursor and start coding! The agents will automatically:
-- Apply appropriate rules based on your current task
-- Suggest best practices for your role
-- Optimize for cost by using free models first
-- Escalate to premium models when needed
-- Use MCP tools for enhanced capabilities (web search, browser automation, etc.)
-
-## 🔌 MCP Integration
-
-This bootstrap repository includes comprehensive Model Context Protocol (MCP) configurations that extend your AI agents' capabilities:
-
-### Available MCP Tools
-
-| Category | Tools | Capabilities |
-|----------|-------|-------------|
-| **Research** | Web Search, Brave Search, Perplexity | Real-time web research, documentation lookup |
-| **Browser** | Browser Tools, Playwright | Automated testing, debugging, screenshots |
-| **Development** | GitHub, Git, Filesystem | Code management, file operations |
-| **Database** | PostgreSQL, SQLite | Database queries, schema analysis |
-| **Cloud** | AWS, Vercel, Netlify, Docker | Deployment, monitoring, container management |
-| **Communication** | Slack, Notion, Google Drive | Team coordination, documentation |
-
-### Quick MCP Setup
-
-```bash
-# Interactive MCP configuration
-./scripts/setup-mcp.sh
-
-# Choose from:
-# 1. Quick Setup (free tools only)
-# 2. Role-based Setup (optimized for your agent role)
-# 3. Full Setup (all tools with API keys)
-# 4. Custom Setup (manual selection)
-```
-
-### MCP Usage Examples
-
-```bash
-# AI can now search the web for solutions
-"Search for React 18 best practices and summarize the top 5 recommendations"
-
-# Browser automation for testing
-"Take a screenshot of our homepage and analyze the accessibility issues"
-
-# Database operations
-"Show me the schema for the users table and suggest optimizations"
-
-# Cloud deployment
-"Deploy this React app to Vercel and configure the custom domain"
-```
-
-For detailed MCP configuration, see [MCP_GUIDE.md](docs/MCP_GUIDE.md).
-
-For agent communication and switching, see [AGENT_COMMUNICATION_GUIDE.md](docs/AGENT_COMMUNICATION_GUIDE.md).
-
-For research findings and methodology, see [AGENT_RESEARCH_SUMMARY.md](docs/AGENT_RESEARCH_SUMMARY.md).
 
 ## 💡 Usage Examples
 
@@ -267,26 +185,6 @@ describe('Button Component', () => {
   });
 });
 ```
-
-## 🎯 Best Practices
-
-### Cost Management
-- Start every task with FREE models (Gemini 2.5 Flash, DeepSeek V3.1)
-- Use premium models (Claude 3.5 Sonnet) only for complex problems
-- Monitor your Cursor usage dashboard regularly
-- Set up alerts for unusual usage patterns
-
-### Team Collaboration
-- Use conventional commits for clear history
-- Follow the agent role guidelines for consistency
-- Document decisions in the project wiki
-- Regular code reviews with the appropriate agent
-
-### Quality Assurance
-- Maintain >80% test coverage
-- Run accessibility audits regularly
-- Monitor Core Web Vitals
-- Implement proper error boundaries
 
 ## 🤝 Contributing
 
