@@ -160,7 +160,6 @@ jobs:
     needs: [build, e2e]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/develop'
-    environment: staging
     steps:
       - name: Deploy to staging
         run: |
@@ -173,7 +172,6 @@ jobs:
     needs: [build, e2e]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    environment: production
     steps:
       - name: Deploy to production
         run: |
