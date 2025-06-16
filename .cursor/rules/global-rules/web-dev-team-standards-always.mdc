@@ -1,0 +1,99 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Web Development Team Standards
+
+## Critical Global Rules
+
+- **Model Selection**: Use Gemini 2.5 Flash for initial development, escalate to Claude 3.5 Sonnet for complex problems only (cost control)
+- **Code Quality**: All code must be production-ready, type-safe, and follow modern web development best practices
+- **Component Architecture**: Use React functional components with TypeScript, implement proper prop types and interfaces
+- **Styling**: Use Tailwind CSS for styling with semantic class names and responsive design principles
+- **Accessibility**: Implement WCAG 2.1 AA compliance with proper ARIA labels, semantic HTML, and keyboard navigation
+- **Performance**: Optimize for Core Web Vitals, implement lazy loading, code splitting, and efficient state management
+- **Testing**: Write comprehensive tests using Jest and React Testing Library for components, Playwright for E2E
+- **Error Handling**: Implement proper error boundaries, loading states, and user-friendly error messages
+- **Documentation**: Include JSDoc comments for complex functions and maintain up-to-date README files
+- **Git Workflow**: Use conventional commits, feature branches, and proper PR descriptions
+
+## Agent Role Identification
+
+When working on specific tasks, identify your role:
+- 🎨 **UI/UX Designer**: Focus on user experience, design systems, and visual consistency
+- ⚛️ **Frontend Developer**: React components, state management, client-side logic
+- 🔧 **Backend Developer**: APIs, database design, server-side logic, authentication
+- 🧪 **QA/Testing**: Test coverage, edge cases, performance testing, accessibility testing
+- 🚀 **DevOps**: CI/CD, deployment, monitoring, infrastructure as code
+- 📋 **Project Manager**: Task coordination, timeline management, requirement clarification
+
+## Technology Stack Standards
+
+- **Frontend**: React 18+, TypeScript 5+, Vite, Tailwind CSS 3+
+- **State Management**: Zustand or React Query for server state
+- **Testing**: Jest, React Testing Library, Playwright
+- **Build Tools**: Vite, ESLint, Prettier, Husky
+- **Deployment**: Vercel, Netlify, or similar modern platforms
+- **Version Control**: Git with conventional commits
+
+## Code Style Guidelines
+
+- Use TypeScript strict mode
+- Prefer functional components over class components
+- Use custom hooks for reusable logic
+- Implement proper error boundaries
+- Follow the principle of least privilege for component props
+- Use semantic HTML elements
+- Implement proper loading and error states
+- Optimize images and assets for web performance
+
+## Examples
+
+<example>
+  // Proper React component with TypeScript
+  interface ButtonProps {
+    children: React.ReactNode;
+    onClick: () => void;
+    variant?: 'primary' | 'secondary';
+    disabled?: boolean;
+  }
+
+  export const Button: React.FC<ButtonProps> = ({ 
+    children, 
+    onClick, 
+    variant = 'primary',
+    disabled = false 
+  }) => {
+    return (
+      <button
+        onClick={onClick}
+        disabled={disabled}
+        className={`px-4 py-2 rounded-md font-medium transition-colors ${
+          variant === 'primary' 
+            ? 'bg-blue-600 text-white hover:bg-blue-700' 
+            : 'bg-gray-200 text-gray-900 hover:bg-gray-300'
+        } disabled:opacity-50 disabled:cursor-not-allowed`}
+        aria-label={typeof children === 'string' ? children : undefined}
+      >
+        {children}
+      </button>
+    );
+  };
+</example>
+
+<example type="invalid">
+  // Avoid: Class components, inline styles, missing types
+  class Button extends React.Component {
+    render() {
+      return (
+        <button 
+          style={{backgroundColor: 'blue', color: 'white'}}
+          onClick={this.props.onClick}
+        >
+          {this.props.children}
+        </button>
+      );
+    }
+  }
+</example>

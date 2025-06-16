@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "web-search": {
+      "command": "npx",
+      "args": ["-y", "@smithery/cli@latest", "run", "@mzxrai/mcp-webresearch", "--config", "{}"],
+      "env": {}
+    },
+    "browser-tools": {
+      "command": "npx",
+      "args": ["-y", "mcp-browser-tools@latest"],
+      "env": {}
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem@latest", "."],
+      "env": {}
+    },
+    "git": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-git@latest"],
+      "env": {}
+    },
+    "sqlite": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-sqlite@latest", "--db-path", "./database.sqlite"],
+      "env": {}
+    }
+  }
+} 
