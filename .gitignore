@@ -95,3 +95,14 @@ dev-debug.log
 # Task files
 # tasks.json
 # tasks/ 
+
+# Taskmaster
+.taskmaster/
+.env
+.roomodes
+.clinerules/
+.trae/
+.windsurf/
+.roo/
+AGENTS.md
+CLAUDE.md 
