@@ -1,0 +1,46 @@
+# Product Requirements Document (PRD): Professional Landing Page Update
+
+**1. Overview**
+
+This document outlines the requirements for updating the personal landing page for Joseph Bahous. The primary goal is to shift from a direct booking system (Calendly) to a more managed and personalized request-based system using a form. This change aims to better manage inbound requests, set clear expectations for visitors, and refine the site's messaging to target students and early-career professionals more effectively.
+
+**2. Goals**
+
+- To replace the direct "Book a Chat" functionality with a "Request a Chat" form.
+- To update the website copy to reflect a warmer, more personalized tone that manages expectations gracefully.
+- To ensure the new system filters for the target audience (students and young professionals) without appearing exclusive or unapproachable.
+- To provide Joseph with the necessary information (via the form) to prioritize and respond to the most relevant requests.
+
+**3. Key Features**
+
+- **Feature 1: Request Form Integration**
+  - **Description:** All "Book a Chat" buttons and links will be replaced with a "Request a Chat" button that links to an external form (Tally.so, Typeform, or Google Forms).
+  - **User Story:** As a visitor, I want to fill out a simple form to request a chat so I can provide context about my inquiry.
+  - **Acceptance Criteria:**
+    - All instances of "Book a Chat" buttons are changed to "Request a Chat."
+    - All button links are updated to the new form URL.
+    - The FAQ section is updated to describe the new request process.
+
+- **Feature 2: Updated Website Copy**
+  - **Description:** The messaging in the "Let's Connect" contact section will be updated to be more personal and to set expectations about response availability.
+  - **User Story:** As a visitor, I want to understand who Joseph typically connects with so I know if my request is a good fit.
+  - **Acceptance Criteria:**
+    - The text in the contact section is updated to: "I love connecting with students and early professionals. I review all requests personally and respond to as many as I can."
+
+- **Feature 3: Form Creation**
+  - **Description:** Create a new form with specific screening questions. This task will be handled by Joseph, who will provide the final URL. The form should include conditional logic.
+  - **Form Questions:**
+    1.  Name (Short answer)
+    2.  Location (City & Country) (Short answer)
+    3.  Which best describes you? (Multiple Choice: Student, Young Professional, Other)
+    4.  (Conditional) Educational Background & Institution (Short answer)
+    5.  (Conditional) Current Role/Industry & Years of Experience (Short answer)
+    6.  How did you hear about me? (Multiple choice)
+    7.  What would you like to discuss during our chat? (Paragraph)
+    8.  Is there anything specific you'd like guidance on? (Optional - Paragraph)
+
+**4. Success Metrics**
+
+- A successful implementation will result in the complete removal of the direct Calendly link.
+- The new request form will be accessible from all relevant call-to-action buttons.
+- The website's tone will align with the more personalized and managed approach. 
