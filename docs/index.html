@@ -6,6 +6,7 @@
   <title>Joseph Bahous – Investment Director</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://tally.so/widgets/embed.js"></script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -73,7 +74,7 @@
       <h1 class="text-4xl font-bold tracking-tight text-brand-dark dark:text-white sm:text-6xl">Empowering the Next Generation of Innovators</h1>
       <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-300">Mentorship, venture capital insights, and career guidance from an experienced early-stage investor, Joseph Bahous.</p>
       <div class="mt-10 flex items-center justify-center gap-x-4">
-        <a href="#form-url" class="rounded-full bg-brand-dark dark:bg-white px-8 py-3 text-base font-semibold text-white dark:text-brand-dark shadow-sm hover:bg-[#005080] hover:text-white dark:hover:bg-gray-200 dark:hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition">Schedule a Coffee Chat</a>
+        <a href="coffee-chat.html" class="rounded-full bg-brand-dark dark:bg-white px-8 py-3 text-base font-semibold text-white dark:text-brand-dark shadow-sm hover:bg-[#005080] hover:text-white dark:hover:bg-gray-200 dark:hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition">Schedule a Coffee Chat</a>
         <a href="#about" class="inline-flex items-center rounded-full border-2 border-brand-dark dark:border-white px-8 py-3 text-base font-semibold text-brand-dark dark:text-white bg-transparent hover:bg-gray-100 hover:text-brand-dark dark:hover:bg-gray-800 dark:hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition">
           Learn more
           <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -192,7 +193,7 @@
     <div class="max-w-2xl mx-auto text-center px-4">
       <h2 class="text-3xl font-bold text-brand-dark dark:text-white mb-4">Ready to connect?</h2>
       <p class="text-lg text-gray-700 dark:text-gray-300 mb-8">If you're a student or early-career professional interested in venture capital, startups, or career guidance, I'd love to hear from you. Please fill out the short application to schedule a chat.</p>
-      <a href="#form-url" class="inline-block rounded-full bg-brand-dark dark:bg-white px-8 py-3 text-base font-semibold text-white dark:text-brand-dark shadow-sm hover:bg-[#005080] hover:text-white dark:hover:bg-gray-200 dark:hover:text-brand-dark transition">Schedule a Coffee Chat</a>
+      <a href="coffee-chat.html" class="inline-block rounded-full bg-brand-dark dark:bg-white px-8 py-3 text-base font-semibold text-white dark:text-brand-dark shadow-sm hover:bg-[#005080] hover:text-white dark:hover:bg-gray-200 dark:hover:text-brand-dark transition">Schedule a Coffee Chat</a>
     </div>
   </section>
 
@@ -264,7 +265,7 @@
         <!-- Right: Call to Action -->
         <div class="text-center md:text-left">
           <h3 class="text-2xl font-semibold text-brand-dark dark:text-white mb-4">Let's Connect</h3>
-          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">I'm passionate about helping students and young professionals navigate their careers in finance and technology. To ensure I can provide the most value, I ask that you <a href="#form-url" class="text-[#006DAA] hover:underline">fill out a short application</a> to schedule a coffee chat.</p>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">I'm passionate about helping students and young professionals navigate their careers in finance and technology. To ensure I can provide the most value, I ask that you <a href="coffee-chat.html" class="text-[#006DAA] hover:underline">fill out a short application</a> to schedule a coffee chat.</p>
           <p class="text-lg text-gray-700 dark:text-gray-300">I review every request and aim to connect with as many of you as I can.</p>
         </div>
       </div>
@@ -330,6 +331,11 @@
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       setThemeIcon(isDark);
     });
+  </script>
+  <script>
+    if (typeof Tally !== "undefined") {
+      Tally.loadEmbeds();
+    }
   </script>
 </body>
 </html> 
