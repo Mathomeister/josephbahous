@@ -70,8 +70,43 @@
     </div>
   </div>
 
-  <section id="home" class="relative isolate overflow-hidden bg-brand-light dark:bg-brand-dark min-h-screen flex items-center justify-center">
-    <div class="mx-auto max-w-3xl px-6 lg:px-8 text-center">
+  <section id="home" class="relative isolate overflow-hidden min-h-screen flex items-center justify-center bg-[#b9d6f2] dark:bg-[linear-gradient(135deg,_#1a202c,_#2d3748)] transition-colors duration-300">
+    <!-- Animated SVG Background from animated-hero.html -->
+    <div class="svg-background absolute inset-0 w-full h-full z-0">
+      <svg width="100%" height="100%" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#061a40;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0353a4;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#006daa;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#003559;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0353a4;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#006daa;stop-opacity:1" />
+          </linearGradient>
+          <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#003559;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#061a40;stop-opacity:1" />
+          </linearGradient>
+        </defs>
+        <path class="path-1" fill="none" stroke="url(#gradient1)" stroke-width="2" d="M0,150 C200,50 400,250 700,100 S1100,350 1440,200" />
+        <path class="path-2" fill="none" stroke="url(#gradient2)" stroke-width="2.5" d="M0,400 C300,300 600,500 900,450 S1200,600 1440,500" />
+        <path class="path-3" fill="none" stroke="url(#gradient3)" stroke-width="1.5" d="M0,650 C250,750 550,550 850,700 S1150,500 1440,600" />
+        <path class="path-4" fill="none" stroke="url(#gradient4)" stroke-width="3" d="M0,250 C150,300 350,150 600,280 S1000,100 1440,350" />
+        <!-- Smaller animated elements (circles) -->
+        <circle class="small-circle" cx="100" cy="100" r="5" fill="#0353a4" style="--dx: 50px; --dy: 30px;" />
+        <circle class="small-circle" cx="300" cy="50" r="6" fill="#006daa" style="--dx: -40px; --dy: 60px; animation-delay: 2s;" />
+        <circle class="small-circle" cx="500" cy="200" r="4" fill="#061a40" style="--dx: 70px; --dy: -20px; animation-delay: 4s;" />
+        <circle class="small-circle" cx="700" cy="150" r="7" fill="#003559" style="--dx: -20px; --dy: 40px; animation-delay: 1s;" />
+        <circle class="small-circle" cx="900" cy="300" r="5" fill="#0353a4" style="--dx: 30px; --dy: -50px; animation-delay: 3s;" />
+        <circle class="small-circle" cx="1100" cy="250" r="6" fill="#006daa" style="--dx: -60px; --dy: -10px; animation-delay: 5s;" />
+        <circle class="small-circle" cx="1300" cy="400" r="4" fill="#061a40" style="--dx: 10px; --dy: 70px; animation-delay: 0.5s;" />
+      </svg>
+    </div>
+    <div class="mx-auto max-w-3xl px-6 lg:px-8 text-center relative z-10">
       <h1 class="text-4xl font-bold tracking-tight text-brand-dark dark:text-white sm:text-6xl">Empowering the Next Generation of Innovators</h1>
       <p class="mt-6 text-lg leading-8 text-gray-700 dark:text-gray-300">Mentorship, venture capital insights, and career guidance from an experienced early-stage investor, Joseph Bahous.</p>
       <div class="mt-10 flex items-center justify-center gap-x-4">
@@ -83,6 +118,19 @@
       </div>
     </div>
   </section>
+  <style>
+    .svg-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
+    .path-1 { animation: flowPath1 25s linear infinite alternate; transform-origin: center center; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
+    .path-2 { animation: flowPath2 30s linear infinite alternate-reverse; transform-origin: center center; stroke-dasharray: 1200; stroke-dashoffset: 1200; }
+    .path-3 { animation: flowPath3 20s ease-in-out infinite; transform-origin: center center; stroke-dasharray: 800; stroke-dashoffset: 800; }
+    .path-4 { animation: flowPath4 28s ease-out infinite alternate; transform-origin: center center; stroke-dasharray: 900; stroke-dashoffset: 900; }
+    .small-circle { animation: floatCircle 15s ease-in-out infinite alternate; opacity: 0.2; }
+    @keyframes flowPath1 { 0% { stroke-dashoffset: 1000; transform: translate(0, 0) scale(1); opacity: 0.4; } 50% { stroke-dashoffset: 0; transform: translate(20px, 30px) scale(1.05); opacity: 0.6; } 100% { stroke-dashoffset: 1000; transform: translate(0, 0) scale(1); opacity: 0.4; } }
+    @keyframes flowPath2 { 0% { stroke-dashoffset: 1200; transform: translate(0, 0) scale(1); opacity: 0.3; } 50% { stroke-dashoffset: 0; transform: translate(-30px, 10px) scale(0.95); opacity: 0.5; } 100% { stroke-dashoffset: 1200; transform: translate(0, 0) scale(1); opacity: 0.3; } }
+    @keyframes flowPath3 { 0% { stroke-dashoffset: 800; transform: translate(0, 0) rotate(0deg); opacity: 0.5; } 50% { stroke-dashoffset: 0; transform: translate(15px, -20px) rotate(5deg); opacity: 0.7; } 100% { stroke-dashoffset: 800; transform: translate(0, 0) rotate(0deg); opacity: 0.5; } }
+    @keyframes flowPath4 { 0% { stroke-dashoffset: 900; transform: translate(0, 0) scale(1); opacity: 0.2; } 50% { stroke-dashoffset: 0; transform: translate(-10px, -15px) scale(1.02); opacity: 0.4; } 100% { stroke-dashoffset: 900; transform: translate(0, 0) scale(1); opacity: 0.2; } }
+    @keyframes floatCircle { 0% { transform: translate(0, 0); opacity: 0.2; } 50% { transform: translate(var(--dx), var(--dy)); opacity: 0.5; } 100% { transform: translate(0, 0); opacity: 0.2; } }
+  </style>
 
   <!-- Credentials/Features Section: Simple three column with small icons -->
   <section class="bg-white dark:bg-brand-dark py-20" id="credentials">
