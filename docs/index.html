@@ -22,6 +22,12 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
+    .glass-nav {
+      background: rgba(255, 255, 255, 0.10);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+    }
   </style>
 </head>
 <body>
@@ -32,7 +38,7 @@
         <img src="joseph-bahous.jpg" alt="Joseph Bahous portrait" class="w-10 h-10 rounded-full border-2 border-white shadow-md bg-white" />
       </div>
       <!-- Center: Menu with glassmorphism (hidden on mobile) -->
-      <nav class="backdrop-blur-md bg-white/40 border border-white/30 rounded-full px-8 py-2 flex gap-6 shadow-lg mx-4 hidden md:flex">
+      <nav class="backdrop-blur-md glass-nav border border-white/30 rounded-full px-8 py-2 flex gap-6 shadow-lg mx-4 hidden md:flex">
         <a href="#home" class="text-gray-800 font-medium hover:text-[#006DAA] transition">Home</a>
         <a href="#about" class="text-gray-800 font-medium hover:text-[#006DAA] transition">About</a>
         <a href="#faq" class="text-gray-800 font-medium hover:text-[#006DAA] transition">FAQ</a>
