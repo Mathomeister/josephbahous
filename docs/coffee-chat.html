@@ -20,26 +20,15 @@
       }
     }
   </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .svg-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-    .path-1 { animation: flowPath1 25s linear infinite alternate; transform-origin: center center; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
-    .path-2 { animation: flowPath2 30s linear infinite alternate-reverse; transform-origin: center center; stroke-dasharray: 1200; stroke-dashoffset: 1200; }
-    .path-3 { animation: flowPath3 20s ease-in-out infinite; transform-origin: center center; stroke-dasharray: 800; stroke-dashoffset: 800; }
-    .path-4 { animation: flowPath4 28s ease-out infinite alternate; transform-origin: center center; stroke-dasharray: 900; stroke-dashoffset: 900; }
-    .small-circle { animation: floatCircle 15s ease-in-out infinite alternate; opacity: 0.2; }
-    @keyframes flowPath1 { 0% { stroke-dashoffset: 1000; transform: translate(0, 0) scale(1); opacity: 0.4; } 50% { stroke-dashoffset: 0; transform: translate(20px, 30px) scale(1.05); opacity: 0.6; } 100% { stroke-dashoffset: 1000; transform: translate(0, 0) scale(1); opacity: 0.4; } }
-    @keyframes flowPath2 { 0% { stroke-dashoffset: 1200; transform: translate(0, 0) scale(1); opacity: 0.3; } 50% { stroke-dashoffset: 0; transform: translate(-30px, 10px) scale(0.95); opacity: 0.5; } 100% { stroke-dashoffset: 1200; transform: translate(0, 0) scale(1); opacity: 0.3; } }
-    @keyframes flowPath3 { 0% { stroke-dashoffset: 800; transform: translate(0, 0) rotate(0deg); opacity: 0.5; } 50% { stroke-dashoffset: 0; transform: translate(15px, -20px) rotate(5deg); opacity: 0.7; } 100% { stroke-dashoffset: 800; transform: translate(0, 0) rotate(0deg); opacity: 0.5; } }
-    @keyframes flowPath4 { 0% { stroke-dashoffset: 900; transform: translate(0, 0) scale(1); opacity: 0.2; } 50% { stroke-dashoffset: 0; transform: translate(-10px, -15px) scale(1.02); opacity: 0.4; } 100% { stroke-dashoffset: 900; transform: translate(0, 0) scale(1); opacity: 0.2; } }
-    @keyframes floatCircle { 0% { transform: translate(0, 0); opacity: 0.2; } 50% { transform: translate(var(--dx), var(--dy)); opacity: 0.5; } 100% { transform: translate(0, 0); opacity: 0.2; } }
-  </style>
+  <link rel="stylesheet" href="../templates/styles.css">
 </head>
 <body>
   <header class="w-full fixed top-0 left-0 z-50 bg-transparent">
     <div class="max-w-5xl mx-auto flex items-center justify-between py-3 px-4">
       <div class="flex items-center">
-        <img src="joseph-bahous.jpg" alt="Joseph Bahous portrait" class="w-10 h-10 rounded-full border-2 border-white shadow-md bg-white" />
+        <a href="index.html">
+          <img src="joseph-bahous.jpg" alt="Joseph Bahous portrait" class="w-10 h-10 rounded-full border-2 border-white shadow-md bg-white" />
+        </a>
       </div>
       <nav class="backdrop-blur-md bg-white/40 border border-white/30 rounded-full px-8 py-2 flex gap-6 shadow-lg mx-4 hidden md:flex">
         <a href="index.html#home" class="text-gray-800 font-medium hover:text-[#006DAA] transition">Home</a>
@@ -110,7 +99,7 @@
     </div>
     <div class="w-full flex justify-center bg-white py-8 shadow-md">
       <div class="max-w-2xl w-full px-4">
-        <iframe data-tally-src="https://tally.so/embed/meG6yo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Coffee Chat"></iframe>
+      <iframe data-tally-src="https://tally.so/embed/meG6yo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="200" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Coffee Chat"></iframe>
       </div>
     </div>
   </main>
