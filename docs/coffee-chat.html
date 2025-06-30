@@ -100,14 +100,8 @@
     <div class="w-full flex justify-center bg-white py-8 shadow-md">
       <div class="max-w-2xl w-full px-4">
         <div class="relative min-h-[500px] flex items-center justify-center bg-white">
-          <div id="iframe-loader" class="absolute inset-0 flex items-center justify-center bg-white z-10">
-            <!-- Tailwind spinner -->
-            <svg class="animate-spin h-8 w-8 text-brand-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
-            </svg>
-          </div>
-          <iframe id="tally-iframe" class="w-full h-[500px] hidden transition-opacity duration-300" src="https://tally.so/embed/meG6yo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Coffee Chat"></iframe>
+          <div id="iframe-skeleton" class="absolute inset-0 w-full h-full bg-gray-200 rounded-lg animate-pulse z-10"></div>
+          <iframe id="tally-iframe" class="w-full h-[500px] opacity-0 transition-opacity duration-300" src="https://tally.so/embed/meG6yo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Coffee Chat"></iframe>
         </div>
       </div>
     </div>
@@ -136,15 +130,16 @@
     });
   </script>
   <script>
-    // Iframe loader logic
+    // Tailwind skeleton loader logic
     const iframe = document.getElementById('tally-iframe');
-    const loader = document.getElementById('iframe-loader');
-    if (iframe && loader) {
-      iframe.onload = () => {
-        loader.style.display = 'none';
-        iframe.classList.remove('hidden');
-        iframe.classList.add('opacity-100');
-      };
+    const skeleton = document.getElementById('iframe-skeleton');
+    function showIframe() {
+      if (skeleton) skeleton.style.display = 'none';
+      if (iframe) iframe.classList.remove('opacity-0');
+    }
+    if (iframe && skeleton) {
+      iframe.onload = showIframe;
+      setTimeout(showIframe, 3500); // fallback in case onload doesn't fire
     }
   </script>
 </body>
