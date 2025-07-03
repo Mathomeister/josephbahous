@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+- **All production deployments must follow the dual-repo process:**
+  - Development occurs in the main repo (your account)
+  - Production repo (Joseph Bahous account) is updated only for releases
+  - Manual and automated sync methods are documented in [hosting-options.md](mdc:docs/hosting-options.md#deployment-process-dual-github-repos)
+- **Production repo is created on Joseph Bahous's account ([repo link](mdc:https:/github.com/Joseph-Bahous/josehbahous.com)), and you are a collaborator.**
+- **Deployment Steps (must be followed):**
+  - Prepare production-ready code in your repo
+  - Add client repo as a remote
+  - Push only the main branch to the client repo
+  - Enable GitHub Pages in the client repo (Settings → Pages)
+  - Set the custom domain to josephbahous.com
+  - Configure DNS on GoDaddy (A records for apex, CNAME for www)
+  - Wait for DNS propagation
+  - Enforce HTTPS in Pages settings
+  - Test the live site at https://josephbahous.com and https://www.josephbahous.com
+- **Automation:**
+  - If using GitHub Actions, automate build and push to client repo on release/tag
+- **Best Practices:**
+  - Keep client repo clean (production-ready code only)
+  - Document the sync process in DEPLOYMENT.md
+  - Use branch protection and PR review as needed
+- **Reference:**
+  - See [docs/hosting-options.md](mdc:docs/hosting-options.md#deployment-process-dual-github-repos) and [GitHub Docs](mdc:https:/docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+- **Formatting:**
+  - Follow [cursor_rules.mdc](mdc:.cursor/rules/cursor_rules.mdc) for rule structure and updates
+- **Branch and Documentation Control:**
+  - Only the main branch is pushed to the public repo
+  - No feature, dev, or docs branches
+  - Public .md files in the production repo must only contain website content (for AI/SEO)
+  - Internal documentation must remain in the private development repo
+  - See [docs/hosting-options.md](mdc:docs/hosting-options.md#deployment-process-dual-github-repos) for details

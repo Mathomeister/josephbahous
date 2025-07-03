@@ -15,6 +15,8 @@ This document summarizes the core technologies, tools, and services used to buil
 
 ## Hosting & Deployment
 - **GitHub Pages:** Current static site hosting solution (free, integrates with GitHub repo)
+  - **Production deployment will use the client's GitHub account and repository.**
+  - **Custom domain josephbahous.com is registered on GoDaddy and will be used for production.**
 - **Netlify/Vercel:** Considered for future production (advanced CI/CD, serverless functions, analytics)
 - **AWS S3 + CloudFront:** Option for enterprise-grade scalability (not currently used)
 
@@ -37,7 +39,8 @@ This document summarizes the core technologies, tools, and services used to buil
 ---
 
 ## Analytics & Monitoring
-- **(Planned):** Google Analytics, Search Console, or Plausible (pending implementation)
+- **Google Analytics:** Integration pending (client is setting up GA4 account)
+- **Search Console/Plausible:** (optional, not yet implemented)
 
 ---
 
