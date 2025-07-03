@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Schedule a Coffee Chat – Joseph Bahous</title>
+  <title>Coffee Chat – Joseph Bahous</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Joseph Bahous",
     "jobTitle": "Investment Director, Venture Capital Mentor",
-    "image": "https://mathomeister.github.io/josephbahous/joseph-bahous.jpg",
+    "image": "https://mathomeister.github.io/josephbahous/images/joseph-bahous.jpg",
     "url": "https://mathomeister.github.io/josephbahous/",
     "sameAs": [
       "https://www.linkedin.com/in/joseph-bahous-cfa-337196b3"
@@ -20,10 +20,10 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Schedule a Coffee Chat – Joseph Bahous",
-    "url": "https://mathomeister.github.io/josephbahous/coffee-chat.html",
-    "description": "Request a coffee chat with Joseph Bahous. Qualified applicants will receive a booking link by email."
+    "@type": "WebSite",
+    "name": "Joseph Bahous",
+    "url": "https://mathomeister.github.io/josephbahous/",
+    "description": "Mentorship, venture capital insights, and career guidance from Joseph Bahous."
   }
   </script>
   <!-- Tailwind CSS CDN -->
@@ -43,22 +43,26 @@
   </script>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="icon" href="favicon.ico">
-  <link rel="canonical" href="https://josephbahous.com/coffee-chat.html" />
+  <link rel="canonical" href="https://josephbahous.com/coffee-chat" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body>
+<body class="bg-[#b9d6f2] min-h-screen">
   <header class="w-full fixed top-0 left-0 z-50 bg-transparent" role="banner">
     <div class="max-w-5xl mx-auto flex items-center justify-between py-3 px-4">
+      <!-- Left: Profile Icon -->
       <div class="flex items-center">
         <a href="index.html">
-          <img src="joseph-bahous.jpg" alt="Joseph Bahous portrait" class="w-10 h-10 rounded-full border-2 border-white shadow-md bg-white" loading="lazy" />
+          <img src="images/joseph-bahous.jpg" alt="Joseph Bahous portrait" class="w-10 h-10 rounded-full border-2 border-white shadow-md bg-white" loading="lazy" />
         </a>
       </div>
-      <nav class="backdrop-blur-md bg-white/40 border border-white/30 rounded-full px-8 py-2 flex gap-6 shadow-lg mx-4 hidden md:flex" aria-label="Main navigation">
+      <!-- Center: Menu with glassmorphism (hidden on mobile) -->
+      <nav class="backdrop-blur-md glass-nav border border-white/30 rounded-full px-8 py-2 flex gap-6 shadow-lg mx-4 hidden md:flex" aria-label="Main navigation">
         <a href="index.html#home" class="text-gray-800 font-medium hover:text-[#006DAA] transition">Home</a>
         <a href="index.html#about" class="text-gray-800 font-medium hover:text-[#006DAA] transition">About</a>
         <a href="index.html#faq" class="text-gray-800 font-medium hover:text-[#006DAA] transition">FAQ</a>
         <a href="index.html#contact" class="text-gray-800 font-medium hover:text-[#006DAA] transition">Contact</a>
       </nav>
+      <!-- Right: Mobile Menu Button -->
       <div class="flex items-center gap-2">
         <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center rounded-full bg-white/60 shadow border border-white/30 px-4 py-2 text-gray-800 font-medium hover:bg-gray-200 transition" aria-label="Open navigation menu" aria-haspopup="true" aria-controls="mobile-menu-modal">
           Menu
@@ -67,6 +71,8 @@
       </div>
     </div>
   </header>
+
+  <!-- Mobile Menu Modal -->
   <div id="mobile-menu-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm hidden" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title">
     <div class="relative w-11/12 max-w-sm bg-white/90 rounded-2xl shadow-2xl p-6">
       <div class="flex items-center justify-between mb-4">
@@ -74,99 +80,51 @@
         <button id="mobile-menu-close" class="text-gray-500 text-2xl font-bold" aria-label="Close menu">&times;</button>
       </div>
       <nav class="flex flex-col gap-2" aria-label="Mobile navigation">
-        <a href="index.html#home" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100 transition border-b border-gray-200">Home</a>
-        <a href="index.html#about" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100 transition border-b border-gray-200">About</a>
-        <a href="index.html#faq" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100 transition border-b border-gray-200">FAQ</a>
-        <a href="index.html#contact" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100 transition">Contact</a>
+        <a href="index.html#home" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100">Home</a>
+        <a href="index.html#about" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100">About</a>
+        <a href="index.html#faq" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100">FAQ</a>
+        <a href="index.html#contact" class="py-2 px-2 rounded-lg text-gray-800 hover:bg-gray-100">Contact</a>
       </nav>
     </div>
   </div>
-  <main class="min-h-screen flex flex-col items-center justify-center bg-brand-light pt-24 pb-12">
-    <div class="relative w-full flex flex-col items-center justify-center overflow-hidden" style="min-height:220px;">
-      <div class="svg-background absolute inset-0 w-full h-full z-0 pointer-events-none">
-        <svg width="100%" height="100%" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMid slice">
-          <defs>
-            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#061a40;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#0353a4;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#006daa;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#003559;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#0353a4;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#006daa;stop-opacity:1" />
-            </linearGradient>
-            <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#003559;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#061a40;stop-opacity:1" />
-            </linearGradient>
-          </defs>
-          <path class="path-1" fill="none" stroke="url(#gradient1)" stroke-width="1" d="M0,80 C200,20 400,120 700,60 S1100,150 1440,100" />
-          <path class="path-2" fill="none" stroke="url(#gradient2)" stroke-width="1.5" d="M0,180 C300,120 600,200 900,170 S1200,220 1440,180" />
-          <path class="path-3" fill="none" stroke="url(#gradient3)" stroke-width="0.8" d="M0,250 C250,270 550,170 850,230 S1150,150 1440,200" />
-          <path class="path-4" fill="none" stroke="url(#gradient4)" stroke-width="1.2" d="M0,120 C150,150 350,90 600,140 S1000,60 1440,160" />
-          <circle class="small-circle" cx="100" cy="60" r="5" fill="#0353a4" style="--dx: 50px; --dy: 30px;" />
-          <circle class="small-circle" cx="300" cy="30" r="6" fill="#006daa" style="--dx: -40px; --dy: 60px; animation-delay: 2s;" />
-          <circle class="small-circle" cx="500" cy="100" r="4" fill="#061a40" style="--dx: 70px; --dy: -20px; animation-delay: 4s;" />
-          <circle class="small-circle" cx="700" cy="80" r="7" fill="#003559" style="--dx: -20px; --dy: 40px; animation-delay: 1s;" />
-          <circle class="small-circle" cx="900" cy="140" r="5" fill="#0353a4" style="--dx: 30px; --dy: -50px; animation-delay: 3s;" />
-          <circle class="small-circle" cx="1100" cy="120" r="6" fill="#006daa" style="--dx: -60px; --dy: -10px; animation-delay: 5s;" />
-          <circle class="small-circle" cx="1300" cy="200" r="4" fill="#061a40" style="--dx: 10px; --dy: 70px; animation-delay: 0.5s;" />
-          <circle class="small-circle" cx="200" cy="90" r="3" fill="#003559" style="--dx: 20px; --dy: 10px; animation-delay: 1.2s;" />
-          <circle class="small-circle" cx="400" cy="60" r="4" fill="#0353a4" style="--dx: -15px; --dy: 25px; animation-delay: 2.5s;" />
-          <circle class="small-circle" cx="600" cy="180" r="5" fill="#006daa" style="--dx: 35px; --dy: -30px; animation-delay: 3.7s;" />
-          <circle class="small-circle" cx="800" cy="210" r="3" fill="#061a40" style="--dx: -25px; --dy: 15px; animation-delay: 4.1s;" />
-          <circle class="small-circle" cx="1000" cy="170" r="6" fill="#003559" style="--dx: 40px; --dy: -20px; animation-delay: 2.8s;" />
-          <circle class="small-circle" cx="1200" cy="100" r="4" fill="#0353a4" style="--dx: -30px; --dy: 35px; animation-delay: 1.9s;" />
-          <circle class="small-circle" cx="1400" cy="250" r="5" fill="#006daa" style="--dx: 15px; --dy: -10px; animation-delay: 3.2s;" />
-        </svg>
+
+  <!-- Main Content -->
+  <main class="pt-24 pb-12 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold text-brand-dark mb-4">Schedule a Coffee Chat</h1>
+        <p class="text-xl text-gray-700 mb-2">I'd love to connect with students and early-career professionals interested in venture capital, startups, and career guidance.</p>
+        <p class="text-lg text-gray-600">Fill out the form below to request a coffee chat. All conversations are free and confidential.</p>
       </div>
-      <h1 class="relative z-10 text-4xl font-bold text-brand-dark mb-4">Request a Mentorship Coffee Chat</h1>
-      <p class="relative z-10 text-lg text-gray-700">For students and early-career professionals interested in startups, venture capital, or tech careers.</p>
-      <p class="relative z-10 text-base text-gray-600 mb-6">All chats are free, confidential, and focused on your goals.</p>
-    </div>
-    <!-- New How It Works section -->
-    <section class="bg-gray-50 py-12 w-full" id="how-it-works">
-      <div class="max-w-3xl mx-auto px-4">
-        <h2 class="text-2xl font-bold text-brand-dark mb-8 text-center">How It Works</h2>
-        <ol class="space-y-6">
-          <li class="flex items-start">
-            <span class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold mr-4">1</span>
-            <span class="text-lg text-gray-700">Fill out the short application form.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold mr-4">2</span>
-            <span class="text-lg text-gray-700">If you qualify, you'll get a Calendly link instantly to book your chat.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold mr-4">3</span>
-            <span class="text-lg text-gray-700">Otherwise, Joseph will review your request and follow up by email.</span>
-          </li>
-          <li class="flex items-start">
-            <span class="flex-shrink-0 h-10 w-10 rounded-full bg-brand-dark text-white flex items-center justify-center font-bold mr-4">4</span>
-            <span class="text-lg text-gray-700">All chats are free and confidential.</span>
-          </li>
-        </ol>
+      
+      <!-- Tally Form Embed -->
+      <div class="bg-white/80 rounded-xl shadow-lg p-8 max-w-2xl mx-auto">
+        <iframe
+          data-tally-src="https://tally.so/embed/mJXPvA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          height="538"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+          title="Coffee Chat Request Form"
+          class="rounded-lg">
+        </iframe>
       </div>
-    </section>
-    <hr class="w-24 mx-auto my-8 border-t-2 border-brand-dark opacity-30">
-    <div class="w-full flex justify-center bg-white py-8 shadow-md">
-      <div class="max-w-2xl w-full px-4">
-        <div class="relative min-h-[1600px] flex items-center justify-center bg-white">
-          <div id="iframe-skeleton" class="absolute inset-0 w-full h-full bg-gray-200 rounded-lg animate-pulse z-10"></div>
-          <iframe id="tally-iframe" class="w-full h-[1600px] opacity-0 transition-opacity duration-300" src="https://tally.so/embed/meG6yo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="1600" frameborder="0" marginheight="0" marginwidth="0" title="Schedule a Coffee Chat"></iframe>
-        </div>
-        <p class="mt-4 text-sm text-gray-500">Your information is used only for scheduling and communication. No data is shared or sold. You'll receive next steps by email after submitting.</p>
+      
+      <div class="text-center mt-8">
+        <p class="text-sm text-gray-600">Questions? Feel free to <a href="index.html#contact" class="text-[#006DAA] hover:underline">reach out directly</a>.</p>
       </div>
     </div>
   </main>
-  <footer class="bg-brand-light py-8">
-    <div class="max-w-5xl mx-auto px-4 text-center">
+
+  <!-- Footer -->
+  <footer class="bg-white py-8">
+    <div class="max-w-5xl mx-auto px-4 text-center text-brand-dark">
       &copy; Joseph Bahous
     </div>
   </footer>
+
   <script>
     // Mobile menu open/close logic
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -178,24 +136,18 @@
     menuClose && menuClose.addEventListener('click', () => {
       menuModal.classList.add('hidden');
     });
+    // Close modal on ESC
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') menuModal.classList.add('hidden');
+      if (e.key === 'Esc') menuModal.classList.add('hidden');
     });
+    // Close modal when clicking outside
     menuModal && menuModal.addEventListener('click', (e) => {
       if (e.target === menuModal) menuModal.classList.add('hidden');
     });
   </script>
   <script>
-    // Tailwind skeleton loader logic
-    const iframe = document.getElementById('tally-iframe');
-    const skeleton = document.getElementById('iframe-skeleton');
-    function showIframe() {
-      if (skeleton) skeleton.style.display = 'none';
-      if (iframe) iframe.classList.remove('opacity-0');
-    }
-    if (iframe && skeleton) {
-      iframe.onload = showIframe;
-      setTimeout(showIframe, 3500); // fallback in case onload doesn't fire
+    if (typeof Tally !== "undefined") {
+      Tally.loadEmbeds();
     }
   </script>
 </body>
