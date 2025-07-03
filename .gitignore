@@ -1,0 +1,19 @@
+# Ignore internal, dev, and config files/folders for public production repo
+.taskmaster/
+.cursor/
+.roo/
+.clinerules/
+.windsurf/
+.trae/
+.vscode/
+.github/
+node_modules/
+scripts/
+.internal-docs/
+AGENTS.md
+CLAUDE.md
+BOOTSTRAP_SUMMARY.md
+.roomodes
+package.json
+package-lock.json
+# Keep only docs/, LICENSE, and README.md in the public repo 
