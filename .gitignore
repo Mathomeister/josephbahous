@@ -9,6 +9,7 @@
 .github/
 node_modules/
 scripts/
+.internal-docs/
 AGENTS.md
 CLAUDE.md
 BOOTSTRAP_SUMMARY.md
