@@ -17,3 +17,5 @@ BOOTSTRAP_SUMMARY.md
 package.json
 package-lock.json
 # Keep only docs/, LICENSE, and README.md in the public repo 
+
+CHANGELOG.md 
