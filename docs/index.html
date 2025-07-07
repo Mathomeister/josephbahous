@@ -26,6 +26,46 @@
     "description": "Mentorship, venture capital insights, and career guidance from Joseph Bahous."
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What can I talk to Joseph about?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mentorship, VC careers, startup fundraising, investment strategy, and career navigation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this a paid service?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, all coffee chats are free for students and early-career professionals."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Joseph help with connections?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, when relevant, Joseph can connect you to founders, investors, or accelerators."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is my data used?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your information is used only for scheduling and communication. No data is shared or sold."
+        }
+      }
+    ]
+  }
+  </script>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://tally.so/widgets/embed.js"></script>
@@ -75,8 +115,12 @@
       <!-- Right: Mobile Menu Button -->
       <div class="flex items-center gap-2">
         <button id="mobile-menu-btn" class="md:hidden flex items-center justify-center rounded-full bg-white/60 shadow border border-white/30 px-4 py-2 text-gray-800 font-medium hover:bg-gray-200 transition" aria-label="Open navigation menu" aria-haspopup="true" aria-controls="mobile-menu-modal">
-          Menu
-          <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          <!-- Hamburger menu icon -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <line x1="4" y1="6" x2="20" y2="6" />
+            <line x1="4" y1="12" x2="20" y2="12" />
+            <line x1="4" y1="18" x2="20" y2="18" />
+          </svg>
         </button>
       </div>
     </div>
@@ -134,113 +178,72 @@
       </svg>
     </div>
     <div class="mx-auto max-w-3xl px-6 lg:px-8 text-center relative z-10">
-      <h1 class="text-4xl font-bold tracking-tight text-brand-dark sm:text-6xl">Mentorship & Career Guidance for Future Innovators</h1>
-      <p class="mt-6 text-lg leading-8 text-gray-700">For students and early-career professionals seeking advice on startups, venture capital, and career growth. Connect with Joseph Bahous for practical mentorship and real-world insights.</p>
-      <p class="mt-2 text-base text-gray-600">Empowering the next generation of leaders in tech, finance, and entrepreneurship.</p>
+      <h1 class="text-4xl font-bold tracking-tight text-brand-dark sm:text-6xl">Hi, I’m Joseph — a Montréal-based venture investor and mentor</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-700">I offer free coffee chats for students and early-career pros in VC, startups & tech.</p>
       <div class="mt-10 flex items-center justify-center gap-x-4">
-        <a href="coffee-chat.html" class="rounded-full bg-brand-dark px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#005080] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition">Schedule a Coffee Chat</a>
+        <a href="coffee-chat.html" class="rounded-full bg-brand-dark px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#005080] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition flex items-center justify-center gap-2">
+          Schedule a Coffee Chat
+        </a>
         <a href="#about" class="inline-flex items-center rounded-full border-2 border-brand-dark px-8 py-3 text-base font-semibold bg-transparent hover:bg-gray-100 hover:text-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition">
           Learn more
           <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
       </div>
-      <p class="mt-6 text-sm text-gray-500">Who is this for? <span class="font-medium text-brand-dark">Students and young professionals interested in startups, VC, and tech careers.</span></p>
     </div>
   </section>
-  <style>
-    .svg-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; }
-    .path-1 { animation: flowPath1 25s linear infinite alternate; transform-origin: center center; stroke-dasharray: 1000; stroke-dashoffset: 1000; }
-    .path-2 { animation: flowPath2 30s linear infinite alternate-reverse; transform-origin: center center; stroke-dasharray: 1200; stroke-dashoffset: 1200; }
-    .path-3 { animation: flowPath3 20s ease-in-out infinite; transform-origin: center center; stroke-dasharray: 800; stroke-dashoffset: 800; }
-    .path-4 { animation: flowPath4 28s ease-out infinite alternate; transform-origin: center center; stroke-dasharray: 900; stroke-dashoffset: 900; }
-    .small-circle { animation: floatCircle 15s ease-in-out infinite alternate; opacity: 0.2; }
-    @keyframes flowPath1 { 0% { stroke-dashoffset: 1000; transform: translate(0, 0) scale(1); opacity: 0.4; } 50% { stroke-dashoffset: 0; transform: translate(20px, 30px) scale(1.05); opacity: 0.6; } 100% { stroke-dashoffset: 1000; transform: translate(0, 0) scale(1); opacity: 0.4; } }
-    @keyframes flowPath2 { 0% { stroke-dashoffset: 1200; transform: translate(0, 0) scale(1); opacity: 0.3; } 50% { stroke-dashoffset: 0; transform: translate(-30px, 10px) scale(0.95); opacity: 0.5; } 100% { stroke-dashoffset: 1200; transform: translate(0, 0) scale(1); opacity: 0.3; } }
-    @keyframes flowPath3 { 0% { stroke-dashoffset: 800; transform: translate(0, 0) rotate(0deg); opacity: 0.5; } 50% { stroke-dashoffset: 0; transform: translate(15px, -20px) rotate(5deg); opacity: 0.7; } 100% { stroke-dashoffset: 800; transform: translate(0, 0) rotate(0deg); opacity: 0.5; } }
-    @keyframes flowPath4 { 0% { stroke-dashoffset: 900; transform: translate(0, 0) scale(1); opacity: 0.2; } 50% { stroke-dashoffset: 0; transform: translate(-10px, -15px) scale(1.02); opacity: 0.4; } 100% { stroke-dashoffset: 900; transform: translate(0, 0) scale(1); opacity: 0.2; } }
-    @keyframes floatCircle { 0% { transform: translate(0, 0); opacity: 0.2; } 50% { transform: translate(var(--dx), var(--dy)); opacity: 0.5; } 100% { transform: translate(0, 0); opacity: 0.2; } }
-  </style>
 
-  <!-- Credentials/Features Section: Simple three column with small icons -->
-  <section class="bg-white py-20" id="credentials">
+  <!-- What I Offer Section: Grid with icons, white bg -->
+  <section class="py-20 bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brand-dark sm:text-4xl">Why connect with Joseph?</p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-700 mx-auto">Extensive experience in venture capital, mentorship, and investment leadership.</p>
+        <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brand-dark sm:text-4xl">What I Offer</h2>
       </div>
       <div class="mt-10">
         <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
           <div class="relative">
             <dt>
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
-                <!-- Icon: Briefcase -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 21V9h6v12"/></svg>
+                <!-- Icon: Chat -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Early-Stage Venture Investor</p>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Free 1:1 chats</p>
             </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-700">Leading Canada's first quantum-focused VC fund.</dd>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Personalized conversations to help you move forward.</dd>
           </div>
           <div class="relative">
             <dt>
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
-                <!-- Icon: Chart -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <!-- Icon: Lightbulb -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2a7 7 0 017 7c0 3.5-2.5 5.5-3.5 6.5V18a1 1 0 01-2 0v-2.5C7.5 14.5 5 12.5 5 9a7 7 0 017-7z"/></svg>
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">9+ years in VC & Wealth Management</p>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Mentorship on VC, fundraising & tech careers</p>
             </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-700">Experience across public and private markets.</dd>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Guidance on venture capital, fundraising, and building your career in tech.</dd>
           </div>
           <div class="relative">
             <dt>
               <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
-                <!-- Icon: Dollar -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="10" rx="4"/><path d="M6 12h.01M18 12h.01"/></svg>
+                <!-- Icon: Document -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 8h8M8 12h6M8 16h4"/></svg>
               </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Structured $40M+ in assets</p>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Feedback on pitch decks/resumes</p>
             </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-700">Closed over a dozen startup investments.</dd>
-          </div>
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
-                <!-- Icon: Users -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M2 20c0-4 8-6 10-6s10 2 10 6"/></svg>
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Finance Coach, Esplanade Québec (past cohort)</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-700">Provided finance coaching and mentorship to 8+ early-stage startups as part of a dedicated support program.</dd>
-          </div>
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
-                <!-- Icon: School -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 3v4M8 3v4"/></svg>
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Former Investment Director at MEDTEQ+</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-700">Investment expertise in digital health technologies.</dd>
-          </div>
-          <div class="relative">
-            <dt>
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
-                <!-- Icon: Certificate -->
-                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 7L12 12 2 7l10-5 10 5z"/><path d="M2 17v-7l10 5 10-5v7"/><path d="M6 21v-4"/></svg>
-              </div>
-              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">CFA Charterholder, HEC Montréal</p>
-            </dt>
-            <dd class="mt-2 ml-16 text-base text-gray-700">Strong academic and professional foundation.</dd>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Actionable feedback to help you stand out.</dd>
           </div>
         </dl>
       </div>
     </div>
   </section>
+  <hr style="border: 0; height: 1px; background: #b9d6f2; margin: 2rem auto; width: 6rem;">
 
-  <!-- About Section: With testimonial layout -->
-  <section id="about" class="bg-white py-20">
+  <!-- About Me Section: Narrative, testimonial, then credentials grid (accent bg) -->
+  <section class="py-20 bg-white" id="about">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center">
+      <div class="text-center">
+        <h2 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-brand-dark sm:text-4xl">About Me</h2>
+      </div>
+      <div class="lg:grid lg:grid-cols-2 lg:gap-24 lg:items-center mt-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div>
-          <h2 class="text-3xl font-extrabold text-brand-dark mb-4">About Joseph</h2>
           <p class="text-lg text-gray-700 mb-6">Joseph Bahous is a Montréal-based venture investor and mentor passionate about helping the next generation of founders and finance professionals. He believes in practical, honest advice and enjoys supporting students and early-career talent as they navigate the world of startups and investment.</p>
           <p class="text-lg text-gray-700 mb-6">Since 2016, Joseph has focused on pre-seed and seed investments in Canadian companies shaping the future of healthcare and deep tech. He brings experience from both public and private markets, with a strong foundation in financial analysis and portfolio management.</p>
           <p class="text-lg text-gray-700 mb-6">Joseph's mission: <span class="italic">"To make mentorship accessible and actionable for those starting out in tech, VC, and entrepreneurship."</span></p>
@@ -263,32 +266,89 @@
           </div>
         </div>
       </div>
+      <div class="text-center mt-10">
+        <h3 class="text-xl text-brand-dark font-semibold mb-4">A snapshot of my experience and credentials.</h3>
+      </div>
+      <div class="mt-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
+                <!-- Icon: Chart -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">9+ years in VC & Wealth Management</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Experience across public and private markets.</dd>
+          </div>
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
+                <!-- Icon: Dollar -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="2" y="7" width="20" height="10" rx="4"/><path d="M6 12h.01M18 12h.01"/></svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">$40M+ assets managed</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Structured and managed diverse investment portfolios.</dd>
+          </div>
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
+                <!-- Icon: Briefcase -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 21V9h6v12"/></svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">Led Canada’s first quantum-focused VC fund</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Pioneered investments in deep tech and quantum startups.</dd>
+          </div>
+          <div class="relative">
+            <dt>
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-brand-dark text-white">
+                <!-- Icon: Certificate -->
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 7L12 12 2 7l10-5 10 5z"/><path d="M2 17v-7l10 5 10-5v7"/><path d="M6 21v-4"/></svg>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-brand-dark">CFA, HEC Montréal alum</p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-700">Strong academic and professional foundation.</dd>
+          </div>
+        </dl>
+      </div>
     </div>
   </section>
+  <hr style="border: 0; height: 1px; background: #b9d6f2; margin: 2rem auto; width: 6rem;">
 
-  <!-- How It Works Section: Step-by-step process -->
-  <section id="how-it-works" class="bg-[#f8fafc] py-20">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-brand-dark mb-8">How It Works</h2>
-      <ol class="list-decimal pl-6 text-lg text-gray-700 space-y-4 mb-6">
-        <li>Click <span class="font-semibold">"Schedule a Coffee Chat"</span> and fill out the short application form.</li>
-        <li>If you're a student or early-career professional and your request is a good fit, you'll instantly receive a Calendly link to book your chat.</li>
-        <li>Book your coffee chat at a time that works for you.</li>
-        <li>If your request needs manual review, Joseph will follow up by email.</li>
-        <li>After your chat, you may receive follow-up resources or connections if relevant.</li>
+  <!-- How It Works Section: Consistent with coffee-chat.html -->
+  <section id="how-it-works" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-brand-dark mb-4">How It Works</h2>
+        <p class="text-lg text-gray-700">A simple, friendly process to connect for a coffee chat.</p>
+      </div>
+      <ol class="relative border-l-2 border-brand-light max-w-2xl mx-auto">
+        <li class="mb-10 ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-brand-dark rounded-full ring-8 ring-white text-white font-bold">1</span>
+          <h3 class="font-semibold text-brand-dark">Apply for a Coffee Chat</h3>
+          <p class="text-gray-700">Click the button and fill out a short application form.</p>
+        </li>
+        <li class="mb-10 ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-brand-dark rounded-full ring-8 ring-white text-white font-bold">2</span>
+          <h3 class="font-semibold text-brand-dark">Get a Booking Link</h3>
+          <p class="text-gray-700">If you’re a student or early-career professional and your request is a good fit, you’ll instantly receive a Calendly link to book your chat.</p>
+        </li>
+        <li class="mb-10 ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-brand-dark rounded-full ring-8 ring-white text-white font-bold">3</span>
+          <h3 class="font-semibold text-brand-dark">Book Your Chat</h3>
+          <p class="text-gray-700">Choose a time that works for you and confirm your spot.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-3 flex items-center justify-center w-6 h-6 bg-brand-dark rounded-full ring-8 ring-white text-white font-bold">4</span>
+          <h3 class="font-semibold text-brand-dark">Follow-Up</h3>
+          <p class="text-gray-700">After your chat, you may receive follow-up resources or connections if relevant.</p>
+        </li>
       </ol>
-      <p class="text-base text-gray-600">What to expect: A friendly, focused conversation about your goals, questions, and next steps in startups, VC, or career growth. All chats are free and confidential.</p>
     </div>
   </section>
-
-  <!-- CTA Section: Simple Centered -->
-  <section class="bg-white py-16">
-    <div class="max-w-2xl mx-auto text-center px-4">
-      <h2 class="text-3xl font-bold text-brand-dark mb-4">Ready to connect?</h2>
-      <p class="text-lg text-gray-700 mb-8">If you're a student or early-career professional interested in venture capital, startups, or career guidance, I'd love to hear from you. Please fill out the short application to schedule a chat.</p>
-      <a href="coffee-chat.html" class="inline-block rounded-full bg-brand-dark px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-[#005080] hover:text-white transition">Schedule a Coffee Chat</a>
-    </div>
-  </section>
+  <hr style="border: 0; height: 1px; background: #b9d6f2; margin: 2rem auto; width: 6rem;">
 
   <!-- FAQ Section: Offset with supporting text -->
   <section class="bg-white py-20" id="faq">
@@ -296,14 +356,10 @@
       <div class="lg:grid lg:grid-cols-12 lg:gap-8">
         <div class="lg:col-span-5">
           <h2 class="text-3xl font-bold text-brand-dark mb-4">Frequently Asked Questions</h2>
-          <p class="text-lg text-gray-700">Find answers about the process, eligibility, and what you can expect. For anything else, reach out via the contact section below.</p>
+          <p class="text-lg text-gray-700">Find answers about mentorship topics, service details, and privacy. For process steps, see <a href="#how-it-works" class="text-[#006DAA] hover:underline">How It Works</a>.</p>
         </div>
         <div class="mt-12 lg:mt-0 lg:col-span-7">
           <dl class="space-y-8">
-            <div>
-              <dt class="text-lg leading-6 font-medium text-brand-dark">Who is this for?</dt>
-              <dd class="mt-2 text-base text-gray-700">Students and early-career professionals interested in startups, venture capital, or tech careers.</dd>
-            </div>
             <div>
               <dt class="text-lg leading-6 font-medium text-brand-dark">What can I talk to Joseph about?</dt>
               <dd class="mt-2 text-base text-gray-700">Mentorship, VC careers, startup fundraising, investment strategy, and career navigation.</dd>
@@ -311,14 +367,6 @@
             <div>
               <dt class="text-lg leading-6 font-medium text-brand-dark">Is this a paid service?</dt>
               <dd class="mt-2 text-base text-gray-700">No, all coffee chats are free for students and early-career professionals.</dd>
-            </div>
-            <div>
-              <dt class="text-lg leading-6 font-medium text-brand-dark">How does the coffee chat process work?</dt>
-              <dd class="mt-2 text-base text-gray-700">Fill out the application, receive a Calendly link if you qualify, and book your chat. Manual review for other cases.</dd>
-            </div>
-            <div>
-              <dt class="text-lg leading-6 font-medium text-brand-dark">What happens after I submit the form?</dt>
-              <dd class="mt-2 text-base text-gray-700">Qualified applicants get instant booking. Others are reviewed manually. All chats are confidential.</dd>
             </div>
             <div>
               <dt class="text-lg leading-6 font-medium text-brand-dark">Can Joseph help with connections?</dt>
@@ -335,40 +383,38 @@
   </section>
 
   <!-- Contact Section: First-Person Version -->
-  <section id="contact" class="bg-white py-20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Left: Contact Details -->
-        <div class="space-y-6">
-          <h2 class="text-3xl font-bold text-brand-dark mb-4">Contact</h2>
-          <p class="text-lg text-gray-700 mb-8">Feel free to reach out to me directly using the details below.</p>
-          <ul class="space-y-4">
-            <li class="flex items-center gap-3">
-              <a href="https://www.linkedin.com/in/joseph-bahous-cfa-337196b3" target="_blank" rel="noopener" aria-label="LinkedIn" class="flex items-center gap-2 hover:text-[#006DAA] transition">
-                <svg class="w-6 h-6 text-sky-700" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
-                <span class="text-gray-900">LinkedIn</span>
-              </a>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-6 h-6 text-sky-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              <span class="text-gray-900">Montréal, Canada</span>
-            </li>
-          </ul>
-        </div>
-        <!-- Right: Call to Action -->
-        <div class="text-center md:text-left">
-          <h3 class="text-2xl font-semibold text-brand-dark mb-4">Let's Connect</h3>
-          <p class="text-lg text-gray-700 mb-6">I'm passionate about helping students and young professionals navigate their careers in finance and technology. To ensure I can provide the most value, I ask that you <a href="coffee-chat.html" class="text-[#006DAA] hover:underline">fill out a short application</a> to schedule a coffee chat.</p>
-          <p class="text-lg text-gray-700">I review every request and aim to connect with as many of you as I can.</p>
-        </div>
+  <section id="contact" class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-brand-dark mb-4">Let’s Connect</h2>
+      <p class="text-lg text-gray-700 mb-10">Choose how you’d like to connect with Joseph:</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+        <!-- Coffee Chat Option -->
+        <a href="coffee-chat.html" class="flex flex-col items-center bg-white rounded-xl shadow p-8 hover:shadow-lg transition w-72">
+          <span class="mb-4">
+            <!-- Provided meeting/chat icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-brand-dark">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+            </svg>
+          </span>
+          <span class="text-lg font-semibold text-brand-dark mb-2">Request a Coffee Chat</span>
+          <span class="text-gray-600 text-sm">Book a free 1:1 chat with Joseph</span>
+        </a>
+        <!-- LinkedIn Option -->
+        <a href="https://www.linkedin.com/in/joseph-bahous-cfa-337196b3" target="_blank" rel="noopener" class="flex flex-col items-center bg-white rounded-xl shadow p-8 hover:shadow-lg transition w-72">
+          <span class="mb-4">
+            <!-- LinkedIn Icon -->
+            <svg class="w-10 h-10 text-brand-dark" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.968v5.699h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.563 2.841-1.563 3.039 0 3.6 2.001 3.6 4.601v5.595z"/></svg>
+          </span>
+          <span class="text-lg font-semibold text-brand-dark mb-2">Connect on LinkedIn</span>
+          <span class="text-gray-600 text-sm">Message Joseph on LinkedIn</span>
+        </a>
       </div>
     </div>
   </section>
-
   <!-- Footer: Simple Centered -->
   <footer class="bg-white py-8">
     <div class="max-w-5xl mx-auto px-4 text-center text-brand-dark">
-      &copy; Joseph Bahous
+      <div class="mt-4">&copy; Joseph Bahous</div>
     </div>
   </footer>
   </main>
